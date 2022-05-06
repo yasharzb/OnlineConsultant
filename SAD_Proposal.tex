@@ -1,0 +1,204 @@
+\documentclass[12pt,titlepage,a4page , tikz , multi,table , svgnames,xcdraw]{article}
+\usepackage{graphicx}
+\usepackage[svgnames , table , xcdraw]{xcolor}
+\usepackage{fancyhdr}
+\usepackage{fixltx2e}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=cyan,
+}
+
+\usepackage{mathtools}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{listings }
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{afterpage}
+\usepackage{amssymb}
+\usepackage{pdflscape}
+\usepackage{lscape}
+\usepackage{amsmath}
+\usepackage{svg}
+\usepackage[final]{pdfpages}
+\usepackage{pgf, tikz}
+\usetikzlibrary{arrows, automata}
+\usetikzlibrary{shapes.multipart}
+
+
+\DeclareMathOperator\arctanh{arctanh}
+
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage{PTSerif}
+
+\usepackage{float}
+
+\usepackage[Kashida]{xepersian}
+\settextfont[
+ BoldFont={XB Zar bold.ttf}
+ ]{XB Zar.ttf}
+
+
+\NewDocumentCommand{\codeword}{v}{
+\texttt{\textcolor{blue}{#1}}
+}
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{12} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{12}  % for normal
+
+
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+
+\hypersetup{citecolor=blue}
+
+\newcommand\independent{\protect\mathpalette{\protect\independenT}{\perp}}
+\def\independenT#1#2{\mathrel{\rlap{$#1#2$}\mkern2mu{#1#2}}}
+
+% Python style for highlighting
+\newcommand\pythonstyle{\lstset{
+language=Python,
+basicstyle=\ttm,
+otherkeywords={self},             % Add keywords here
+keywordstyle=\ttb\color{deepblue},
+emph={MyClass,__init__},          % Custom highlighting
+emphstyle=\ttb\color{deepred},    % Custom highlighting style
+stringstyle=\color{deepgreen},
+frame=tb,                         % Any extra options here
+showstringspaces=false            %
+}}
+
+
+% Python environment
+\lstnewenvironment{python}[1][]
+{
+\pythonstyle
+\lstset{#1}
+}
+{}
+
+% Python for external files
+\newcommand\pythonexternal[2][]{{
+\pythonstyle
+\lstinputlisting[#1]{#2}}}
+
+\newenvironment{changemargin}[2]{%
+\begin{list}{}{%
+\setlength{\topsep}{0pt}%
+\setlength{\leftmargin}{#1}%
+\setlength{\rightmargin}{#2}%
+\setlength{\listparindent}{\parindent}%
+\setlength{\itemindent}{\parindent}%
+\setlength{\parsep}{\parskip}%
+}%
+\item[]}{\end{list}}
+
+% Python for inline
+\newcommand\pythoninline[1]{{\pythonstyle\lstinline!#1!}}
+
+
+\begin{document}
+
+\begin{titlepage}
+
+ \begin{center}
+
+       \vspace*{0.5cm}
+
+ \vspace{0.5cm}
+       \textbf{ \Huge{به نام خدا} }
+       \vspace{0.2cm}
+
+       \includegraphics[width=0.4\textwidth]{Images/sharif.png}
+
+ 	\vspace{0.3cm}
+       \textbf{ \LARGE{تحلیل و طراحی سیستم‌ها} }
+
+
+   \vspace{0.3cm}
+  \textbf{ \Large{سامانه مشاوره آنلاین} }
+   \vspace{0.3cm}
+
+
+      \large \textbf{دانشکده مهندسی کامپیوتر}\\\vspace{0.2cm}
+    \large   دانشگاه صنعتی شریف\\\vspace{0.25cm}
+
+% استاد:\\
+    \vspace{0.15cm}
+    \noindent\rule[1ex]{\linewidth}{3pt}
+
+    \vspace{0.5cm}
+نام، نام خانوادگی و شماره دانشجویی اعضای گروه:\\
+
+
+        \textbf{{فرزام زهدی‌نسب - 97105996}}
+        \vspace{0.05cm}
+
+        \textbf{{یاشار ظروفچی - 97106119}}
+        \vspace{0.05cm}
+
+        \textbf{{علی بالاپور - 97101326}}
+        \vspace{0.05cm}
+        
+
+\end{center}
+\end{titlepage}
+
+\newpage
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+
+\cfoot{\thepage}
+\chead{سامانه مشاوره آنلاین}
+\rhead{پیشنهادنامه}
+\lhead{تحلیل و طراحی سیستم‌ها}
+
+\tableofcontents
+
+\newpage
+
+
+\input{TeX/1_Introduction}
+
+\newpage
+
+\input{TeX/2_Prelims}
+
+
+\newpage
+
+
+\input{TeX/3_Scope}
+
+\newpage
+\input{TeX/4_Approach}
+
+
+\newpage
+\input{TeX/5_Management}
+
+\newpage
+\input{TeX/6_Limits}
+
+\newpage
+
+\medskip
+
+
+% \bibliographystyle{unsrt-fa}
+% \bibliography{mybibliography}
+
+
+
+
+\end{document}
+

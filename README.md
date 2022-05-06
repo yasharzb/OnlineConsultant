@@ -7,3 +7,4 @@ Online health consultent system
 ### Farzam Zohdinasab
 ### Ali Balapour
 
+The propsal is written in *SAD_Proposal.pdf*
